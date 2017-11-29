@@ -1,14 +1,21 @@
 // Select color input
 
-var gridHeight = 10;
-var gridWidth = 20;
+var gridHeight = 0;
+var gridWidth = 0;
 $('#sizePicker').submit(function(e) {
   e.preventDefault();
-  makeGrid();
+  if($('table').has('tr').length) {
+    removeGrid();
+    makeGrid();
+  } else {
+    makeGrid();
+  }
 });
 
 function makeGrid() {
-console.log(gridWidth);
+  gridHeight = $('#input_height').val();
+  gridWidth = $('#input_width').val();
+
   for(var i = 0; i<gridHeight; i++) {
     $('#pixel_canvas').append('<tr id="tr' + i + '"></tr>');
 
@@ -16,5 +23,8 @@ console.log(gridWidth);
       $('#tr' + i).append('<td></td>');
     }
   }
+}
 
+function removeGrid() {
+  $('tr').remove();
 }
