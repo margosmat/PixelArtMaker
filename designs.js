@@ -1,10 +1,20 @@
 // Select color input
-// Select size input
 
-// When size is submitted by the user, call makeGrid()
+var gridHeight = 10;
+var gridWidth = 20;
+$('#sizePicker').submit(function(e) {
+  e.preventDefault();
+  makeGrid();
+});
 
 function makeGrid() {
+console.log(gridWidth);
+  for(var i = 0; i<gridHeight; i++) {
+    $('#pixel_canvas').append('<tr id="tr' + i + '"></tr>');
 
-// Your code goes here!
+    for(var j = 0; j<gridWidth; j++) {
+      $('#tr' + i).append('<td></td>');
+    }
+  }
 
 }
