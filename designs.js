@@ -1,5 +1,3 @@
-// Select color input
-
 var gridHeight = 0;
 var gridWidth = 0;
 var pickedColor = $('#colorPicker').val();
@@ -28,6 +26,8 @@ function makeGrid() {
   gridHeight = $('#input_height').val();
   gridWidth = $('#input_width').val();
 
+  $('table').hide();
+
   for(var i = 0; i<gridHeight; i++) {
     $('#pixel_canvas').append('<tr id="tr' + i + '"></tr>');
 
@@ -35,6 +35,8 @@ function makeGrid() {
       $('#tr' + i).append('<td class="cell"></td>');
     }
   }
+
+  $('table').css('background', '#FFF').fadeIn(1000);
 }
 
 function removeGrid() {
