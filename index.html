@@ -11,10 +11,11 @@
     <h2>Choose Grid Size</h2>
     <form id="sizePicker">
         Grid Height:
-        <input type="number" id="input_height" name="height" min="1" value="1">
+        <input type="number" id="input_height" name="height" min="1" max="70" value="1">
         Grid Width:
-        <input type="number" id="input_width" name="width" min="1" value="1">
-        <input type="submit" value="Make a grid">
+        <input type="number" id="input_width" name="width" min="1" max="70" value="1">
+        <input type="submit" name="make" id="makeGrid" value="Make a grid">
+        <input type="submit" name="clear" id="clearGrid" value="Clear grid">
     </form>
 
     <h2>Pick A Color</h2>
