@@ -2,7 +2,7 @@ var gridHeight = 0;
 var gridWidth = 0;
 var pickedColor = $('#colorPicker').val();
 
-$('#makeGrid').click(function(e) {
+$('#sizePicker').submit(function(e) {
   e.preventDefault();
   if($('table').has('tr').length) {
     removeGrid();

@@ -32,7 +32,7 @@ input[type=number] {
     font-weight: 800;
 }
 
-input[type=submit] {
+input[type=submit], input[type=button] {
   font-family: Amatic SC;
   font-size: 1.1em;
   border-radius: 5px;
